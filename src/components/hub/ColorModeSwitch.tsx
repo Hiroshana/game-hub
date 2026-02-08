@@ -4,7 +4,7 @@ import { IconButton } from "@chakra-ui/react";
 import { Sun, Moon } from "lucide-react";
 import { useColorMode } from "../ui/color-mode";
 
-const ToggleForDarkLight = () => {
+const ColorModeSwitch = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
@@ -18,4 +18,4 @@ const ToggleForDarkLight = () => {
   );
 };
 
-export default ToggleForDarkLight;
+export default ColorModeSwitch;

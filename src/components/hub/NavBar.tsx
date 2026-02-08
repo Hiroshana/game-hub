@@ -1,6 +1,6 @@
 import { HStack, Image, Text } from "@chakra-ui/react";
 import logo from "../../assets/game-hub-logo.jpg";
-import ToggleForDarkLight from "./ToggleForDarkLight";
+import ToggleForDarkLight from "./ColorModeSwitch";
 
 const NavBar = () => {
   return (
