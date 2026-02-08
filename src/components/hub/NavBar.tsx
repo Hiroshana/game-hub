@@ -1,4 +1,4 @@
-import { HStack, Image, Text } from "@chakra-ui/react";
+import { HStack, Image } from "@chakra-ui/react";
 import logo from "../../assets/game-hub-logo.jpg";
 import ToggleForDarkLight from "./ColorModeSwitch";
 
