@@ -4,9 +4,8 @@ import ToggleForDarkLight from "./ColorModeSwitch";
 
 const NavBar = () => {
   return (
-    <HStack>
-      <Image src={logo} boxSize="80px" p="10px" />
-      <Text>Game Hub</Text>
+    <HStack justifyContent={"space-between"} padding={"10px"}>
+      <Image src={logo} boxSize="60px" />
       <ToggleForDarkLight></ToggleForDarkLight>
     </HStack>
   );
