@@ -1,9 +1,10 @@
-import { Grid, GridItem, useBreakpointValue } from "@chakra-ui/react";
+import { Grid, GridItem, HStack, useBreakpointValue } from "@chakra-ui/react";
 import NavBar from "./components/hub/NavBar";
 import GameGrid from "./components/hub/GameGrid";
 import GenreList from "./components/hub/GenreList";
 import { useState } from "react";
 import type { Genre } from "./hooks/useGenres";
+import PlatformSelector from "./components/hub/PlatformSelector";
 
 function App() {
   const showAside = useBreakpointValue({ base: false, lg: true });
@@ -41,6 +42,10 @@ function App() {
       )}
 
       <GridItem area="main">
+        <HStack paddingLeft={"10px"}>
+          <PlatformSelector />
+        </HStack>
+
         <GameGrid selectedGenre={selectedGenre} />
       </GridItem>
     </Grid>
