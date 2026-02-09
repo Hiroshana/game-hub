@@ -20,7 +20,7 @@ function App() {
       }}
       gridTemplateColumns={{
         base: "1fr",
-        lg: "300px 1fr", // aside width + main
+        lg: "250px 1fr", // aside width + main
       }}
     >
       <GridItem area="nav">
@@ -28,7 +28,7 @@ function App() {
       </GridItem>
 
       {showAside && (
-        <GridItem area="aside">
+        <GridItem area="aside" paddingX="10px">
           <GenreList />
         </GridItem>
       )}
