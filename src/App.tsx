@@ -6,6 +6,7 @@ import { useState } from "react";
 import type { Genre } from "./hooks/useGenres";
 import PlatformSelector from "./components/hub/PlatformSelector";
 import type { Platform } from "./hooks/useGames";
+import SortSelector from "./components/hub/SortSelector";
 
 export interface GameQuery {
   genre: Genre | null;
@@ -48,13 +49,14 @@ function App() {
       )}
 
       <GridItem area="main">
-        <HStack paddingLeft={"10px"}>
+        <HStack paddingLeft={"10px"} gap={5} marginBottom={5}>
           <PlatformSelector
             selectedPlatform={gameQuery.platform}
             onSelectPlatform={(platform) =>
               setGameQuery({ ...gameQuery, platform })
             }
           />
+          <SortSelector />
         </HStack>
 
         <GameGrid gameQuery={gameQuery} />
