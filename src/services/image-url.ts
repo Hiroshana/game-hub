@@ -1,10 +1,10 @@
-import logo from "../assets/game-hub-logo.jpg";
+import noImage from "../assets/no-image-placeholder.webp";
 
 const getCroppedImageUrl = (url: string) => {
   if (!url) {
-    return logo;
+    return noImage;
   }
-  console.log(url);
+
   const target = "media/";
 
   const pos = url.indexOf(target);
