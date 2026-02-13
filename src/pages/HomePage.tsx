@@ -1,3 +1,8 @@
+import GameGrid from "@/components/hub/GameGrid";
+import GameHeading from "@/components/hub/GameHeading";
+import GenreList from "@/components/hub/GenreList";
+import PlatformSelector from "@/components/hub/PlatformSelector";
+import SortSelector from "@/components/hub/SortSelector";
 import {
   Box,
   Grid,
@@ -5,25 +10,17 @@ import {
   HStack,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import GameGrid from "./components/hub/GameGrid";
-import GameHeading from "./components/hub/GameHeading";
-import GenreList from "./components/hub/GenreList";
-import NavBar from "./components/hub/NavBar";
-import PlatformSelector from "./components/hub/PlatformSelector";
-import SortSelector from "./components/hub/SortSelector";
 
-function App() {
+const HomePage = () => {
   const showAside = useBreakpointValue({ base: false, lg: true });
 
   return (
     <Grid
       templateAreas={{
         base: `
-      "nav"
       "main"
     `,
         lg: `
-      "nav nav"
       "aside main"
     `,
       }}
@@ -32,10 +29,6 @@ function App() {
         lg: "250px 1fr", // aside width + main
       }}
     >
-      <GridItem area="nav">
-        <NavBar />
-      </GridItem>
-
       {showAside && (
         <GridItem area="aside" paddingX="10px">
           <GenreList />
@@ -56,6 +49,6 @@ function App() {
       </GridItem>
     </Grid>
   );
-}
+};
 
-export default App;
+export default HomePage;
